@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Good Looks Salon | Cincinnati Barber Shop</title>
+
+<meta name="description" content="Good Looks Salon - Professional barbering in Cincinnati, Ohio. Fresh cuts, fades, grooming, and friendly service.">
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--gold:#c9a227;
+--gold2:#e2c766;
+--dark:#0d0d0d;
+--card:#171717;
+--light:#f5f5f5;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Inter,sans-serif;
+background:#0d0d0d;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:'';
+position:fixed;
+width:100%;
+height:100%;
+pointer-events:none;
+background:
+radial-gradient(circle at top,
+rgba(201,162,39,.12),
+transparent 50%);
+z-index:-1;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,.8);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+z-index:1000;
+}
+
+.logo{
+font-family:'Bebas Neue',sans-serif;
+font-size:2rem;
+letter-spacing:3px;
+color:var(--gold2);
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:.95rem;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.8)),
+url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=1800&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.pole{
+width:120px;
+height:6px;
+margin:0 auto 30px;
+border-radius:99px;
+background:linear-gradient(
+90deg,
+#d62828,
+white,
+#2563eb,
+white,
+#d62828
+);
+}
+
+.hero h1{
+font-family:'Bebas Neue',sans-serif;
+font-size:clamp(4rem,12vw,8rem);
+letter-spacing:4px;
+line-height:.9;
+}
+
+.hero p{
+margin:25px auto;
+max-width:700px;
+font-size:1.15rem;
+line-height:1.8;
+color:#ddd;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:16px 30px;
+border-radius:999px;
+text-decoration:none;
+font-weight:700;
+transition:.3s;
+}
+
+.primary{
+background:var(--gold);
+color:black;
+}
+
+.secondary{
+border:1px solid rgba(255,255,255,.3);
+color:white;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+section{
+padding:90px 8%;
+max-width:1300px;
+margin:auto;
+}
+
+h2{
+font-family:'Bebas Neue';
+font-size:3rem;
+letter-spacing:2px;
+margin-bottom:30px;
+color:var(--gold2);
+}
+
+.about{
+font-size:1.05rem;
+line-height:2;
+color:#ddd;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:var(--card);
+padding:30px;
+border-radius:16px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+margin-bottom:10px;
+color:var(--gold2);
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+text-align:center;
+}
+
+.stat{
+background:var(--card);
+padding:40px;
+border-radius:16px;
+}
+
+.stat h3{
+font-family:'Bebas Neue';
+font-size:4rem;
+color:var(--gold2);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:18px;
+}
+
+.gallery img{
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:16px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.reviews{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.review{
+background:var(--card);
+padding:30px;
+border-left:4px solid var(--gold);
+border-radius:12px;
+}
+
+.review p{
+line-height:1.9;
+}
+
+.review strong{
+display:block;
+margin-top:15px;
+color:var(--gold2);
+}
+
+.contact{
+background:var(--card);
+padding:40px;
+border-radius:20px;
+text-align:center;
+}
+
+.contact a{
+color:var(--gold2);
+text-decoration:none;
+}
+
+footer{
+padding:50px 20px;
+text-align:center;
+color:#aaa;
+}
+
+@media(max-width:768px){
+
+nav{
+padding:15px;
+}
+
+nav div:last-child{
+display:none;
+}
+
+.hero h1{
+font-size:4rem;
+}
+
+.buttons{
+flex-direction:column;
+}
+
+.btn{
+width:100%;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">GOOD LOOKS SALON</div>
+<div>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="pole"></div>
+
+<h1>
+LOOK SHARP.<br>
+FEEL SHARP.
+</h1>
+
+<p>
+Cincinnati's destination for fresh fades, clean cuts,
+detailed grooming, and a barbering experience that keeps
+clients coming back.
+</p>
+
+<div class="buttons">
+
+<a href="tel:+15139617555" class="btn primary">
+Call (513) 961-7555
+</a>
+
+<a href="https://maps.google.com/?q=2700+Short+Vine+St+Cincinnati+OH+45219"
+class="btn secondary"
+target="_blank">
+Get Directions
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2>About</h2>
+
+<div class="about">
+Located on Short Vine in Cincinnati, Good Looks Salon provides
+professional barbering in a welcoming environment. Customers
+consistently mention friendly service, quality cuts, and attention
+to detail. Whether you're maintaining your signature style or trying
+something new, the focus is on helping every client leave looking
+and feeling their best.
+</div>
+
+</section>
+
+<section id="services">
+
+<h2>Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Haircuts</h3>
+<p>Precision cuts designed around your style.</p>
+</div>
+
+<div class="card">
+<h3>Fades</h3>
+<p>Clean and modern fade work.</p>
+</div>
+
+<div class="card">
+<h3>Beard Grooming</h3>
+<p>Sharp, polished beard maintenance.</p>
+</div>
+
+<div class="card">
+<h3>Shape-Ups</h3>
+<p>Detailed line work and finishing touches.</p>
+</div>
+
+<div class="card">
+<h3>Modern Styles</h3>
+<p>Fresh looks tailored to current trends.</p>
+</div>
+
+<div class="card">
+<h3>Classic Styles</h3>
+<p>Traditional barbering with attention to detail.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Why Clients Choose Us</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h3>4.6★</h3>
+<p>Google Rating</p>
+</div>
+
+<div class="stat">
+<h3>168</h3>
+<p>Reviews</p>
+</div>
+
+<div class="stat">
+<h3>Cincy</h3>
+<p>Local Barber Shop</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Inside The Shop</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1200&q=80">
+
+<img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80">
+
+<img src="https://images.unsplash.com/photo-1512690459411-b0fd1c86b8c8?auto=format&fit=crop&w=1200&q=80">
+
+<img src="https://images.unsplash.com/photo-1622288432450-277d0fef5ed6?auto=format&fit=crop&w=1200&q=80">
+
+</div>
+
+</section>
+
+<section id="reviews">
+
+<h2>Reviews</h2>
+
+<div class="reviews">
+
+<div class="review">
+<p>
+"Abdel was great, very inviting and friendly. He had never cut me before and was able to give me one of the best haircuts I've ever had."
+</p>
+<strong>Verified Customer</strong>
+</div>
+
+<div class="review">
+<p>
+"Abdel is the most talented and accommodating barber I've had. He's great at cutting different types of hair."
+</p>
+<strong>Andrew Nicholas</strong>
+</div>
+
+<div class="review">
+<p>
+"This barber shop has given me the best haircut I've had since 2021."
+</p>
+<strong>Hunter Rosen</strong>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Visit Good Looks Salon</h2>
+
+<div class="contact">
+
+<p><strong>Address</strong></p>
+<p>
+<a href="https://maps.google.com/?q=2700+Short+Vine+St+Cincinnati+OH+45219" target="_blank">
+2700 Short Vine St, Cincinnati, OH 45219
+</a>
+</p>
+
+<br>
+
+<p><strong>Phone</strong></p>
+
+<p>
+<a href="tel:+15139617555">
+(513) 961-7555
+</a>
+</p>
+
+<br>
+
+<p><strong>Hours</strong></p>
+<p>Currently listed as open and closing at 8 PM.</p>
+
+<br>
+
+<p>
+<a href="https://m.facebook.com/goodlookssalon/" target="_blank">
+Visit Facebook Page
+</a>
+</p>
+
+</div>
+
+</section>
+
+<footer>
+Good Looks Salon • Cincinnati, Ohio
+</footer>
+
+</body>
+</html>
